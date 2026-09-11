@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINA — Radiance, Refined by Science</title>
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= FLOATING NAVBAR ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="nav-logo">LUMINA</a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#why-lumina">Routine Finder</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+
+      <!-- Action Icons -->
+      <div class="nav-actions">
+        <a href="#account" class="nav-action-link">
+          <i class="fa-regular fa-user"></i>
+          <span>Account</span>
+        </a>
+        <a href="#cart" class="nav-action-link cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart (<span id="cartCount">0</span>)</span>
+        </a>
+        <button class="nav-icon-btn" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- Mobile hamburger -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION (FULL SCREEN) ================= -->
+  <section class="hero-section">
+    <div class="hero-bg-container">
+      <img
+        src="image 1.png"
+        srcset="image 1.png 1x, image 1@2x.png 2x, image 1@3x.png 3x"
+        alt="LUMINA Radiance, Refined by Science"
+        class="hero-bg-img"
+      />
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">PURE CARE. LASTING GLOW.</span>
+        <h1 class="hero-title">
+          Radiance,<br />
+          Refined by<br />
+          Science
+        </h1>
+        <p class="hero-description">
+          Experience clinically-grade skincare<br />encased in pure luxury.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="#products" class="btn-dark">
+            Shop Now <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS SECTION ================= -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <h2 class="section-title">RADIANCE, REFINED.</h2>
+      <p class="section-subtitle">Explore our bestsellers and find your perfect skincare match.</p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1: Serum Glass -->
+      <div class="product-card" data-product="Serum Glass" data-price="38.0">
+        <div class="card-img-box">
+          <img src="surem.png" alt="Serum Glass" loading="lazy" />
+        </div>
+        <div class="card-details">
+          <h3 class="product-name">Serum Glass</h3>
+          <span class="product-price">$38.0</span>
+        </div>
+        <button class="product-arrow-btn" aria-label="Add Serum Glass to cart" title="Add to cart">
+          &rarr;
+        </button>
+      </div>
+
+      <!-- Product 2: Moisturizers -->
+      <div class="product-card" data-product="Moisturizers" data-price="40.0">
+        <div class="card-img-box">
+          <img src="moist.png" alt="Moisturizers" loading="lazy" />
+        </div>
+        <div class="card-details">
+          <h3 class="product-name">Moisturizers</h3>
+          <span class="product-price">$40.0</span>
+        </div>
+        <button class="product-arrow-btn" aria-label="Add Moisturizers to cart" title="Add to cart">
+          &rarr;
+        </button>
+      </div>
+
+      <!-- Product 3: Toners -->
+      <div class="product-card" data-product="Toners" data-price="32.0">
+        <div class="card-img-box">
+          <img src="toner.png" alt="Toners" loading="lazy" />
+        </div>
+        <div class="card-details">
+          <h3 class="product-name">Toners</h3>
+          <span class="product-price">$32.0</span>
+        </div>
+        <button class="product-arrow-btn" aria-label="Add Toners to cart" title="Add to cart">
+          &rarr;
+        </button>
+      </div>
+
+      <!-- Product 4: Face Oils -->
+      <div class="product-card" data-product="Face Oils" data-price="50.0">
+        <div class="card-img-box">
+          <img src="face oil.png" alt="Face Oils" loading="lazy" />
+        </div>
+        <div class="card-details">
+          <h3 class="product-name">Face Oils</h3>
+          <span class="product-price">$50.0</span>
+        </div>
+        <button class="product-arrow-btn" aria-label="Add Face Oils to cart" title="Add to cart">
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES / VALUE PROPS ================= -->
+  <section class="features-section">
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-item">
+        <div class="feature-icon-circle">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <h4 class="feature-title">Clean Ingredients</h4>
+        <p class="feature-desc">Thoughtfully sourced, never compromised.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-item">
+        <div class="feature-icon-circle">
+          <i class="fa-solid fa-flask"></i>
+        </div>
+        <h4 class="feature-title">Clinically Tested</h4>
+        <p class="feature-desc">Visible results, backed by science.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-item">
+        <div class="feature-icon-circle">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <h4 class="feature-title">Free Shipping</h4>
+        <p class="feature-desc">On orders over $75.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-item">
+        <div class="feature-icon-circle">
+          <i class="fa-regular fa-shield-check"></i>
+        </div>
+        <h4 class="feature-title">Secure Payment</h4>
+        <p class="feature-desc">Shop with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY LUMINA / REAL CARE SECTION ================= -->
+  <section class="why-lumina-section" id="why-lumina">
+    <div class="why-lumina-grid">
+      <!-- Left Photo: Real Care. Real Results. -->
+      <div class="why-image-card">
+        <img src="real care.png" alt="Real Care. Real Results." class="why-card-img" />
+      </div>
+
+      <!-- Center Card: Information & Checklist -->
+      <div class="why-content-card">
+        <span class="why-tag">WHY LUMINA</span>
+        <h2 class="why-heading">Skincare That<br />Works With Your Skin</h2>
+        <p class="why-desc">
+          Our formulas are powered by nature and backed by science — designed to hydrate, protect, and bring out your natural glow.
+        </p>
+
+        <ul class="why-checklist">
+          <li>
+            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+            <span>Dermatologist tested</span>
+          </li>
+          <li>
+            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+            <span>Suitable for all skin types</span>
+          </li>
+          <li>
+            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+            <span>Free from parabens &amp; sulfates</span>
+          </li>
+          <li>
+            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+            <span>Made with sustainable ingredients</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Photo: Botanical Dew Texture -->
+      <div class="why-leaf-card">
+        <img src="leaf-droplet.png" alt="Pure botanical formula in petri dish" class="why-card-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS SECTION ================= -->
+  <section class="testimonials-section" id="reviews">
+    <div class="section-header">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Real people. Real results.</p>
+    </div>
+
+    <div class="testimonials-slider-container">
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Review 1 -->
+        <div class="testimonial-card active">
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Sarah M." class="user-avatar" />
+          </div>
+          <div class="testimonial-body">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;I've been using Lumina for a month and my skin has never looked better! So hydrated and fresh.&rdquo;
+            </p>
+            <span class="testimonial-author">&mdash; Sarah M.</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card active">
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80" alt="Nouran A." class="user-avatar" />
+          </div>
+          <div class="testimonial-body">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;The Hydra-Gel is a game changer! Lightweight, non-greasy and gives such a natural glow.&rdquo;
+            </p>
+            <span class="testimonial-author">&mdash; Nouran A.</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card active">
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Dina K." class="user-avatar" />
+          </div>
+          <div class="testimonial-body">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;Beautiful packaging, amazing products and fast delivery. I'm obsessed!&rdquo;
+            </p>
+            <span class="testimonial-author">&mdash; Dina K.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Slider Controls -->
+      <div class="slider-controls">
+        <button class="slider-arrow" id="prevReview" aria-label="Previous testimonial">
+          &larr;
+        </button>
+        <div class="slider-dots" id="sliderDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+        <button class="slider-arrow" id="nextReview" aria-label="Next testimonial">
+          &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section class="cta-banner-section">
+    <div class="cta-banner-card">
+      <div class="cta-banner-visual">
+        <img src="banner-leaves.png" alt="Fresh leaves with morning dew" class="cta-banner-img" />
+      </div>
+      <div class="cta-banner-content">
+        <h3 class="cta-banner-title">Your Glow Starts Here</h3>
+        <p class="cta-banner-subtitle">Discover a healthier, brighter you.</p>
+      </div>
+      <div class="cta-banner-action">
+        <a href="#products" class="btn-dark btn-banner">
+          Shop All <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Brand & Tagline -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">LUMINA</a>
+          <p class="footer-tagline">Radiance, Refined.</p>
+        </div>
+
+        <!-- Links -->
+        <ul class="footer-nav">
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Social & Newsletter -->
+        <div class="footer-social-newsletter">
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <form class="footer-newsletter" id="newsletterForm">
+            <input type="email" placeholder="Join our newsletter" required />
+            <button type="submit" aria-label="Submit newsletter">&rarr;</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 LUMINA. All rights reserved.</p>
+        <p class="footer-category">Skincare / Beauty / Wellness</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Add to Cart -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
