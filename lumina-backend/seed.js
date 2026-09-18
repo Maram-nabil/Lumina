@@ -25,7 +25,23 @@ const sampleProducts = [
     skinType: ["dry", "aging"],
     concerns: ["aging", "dullness"],
     description: "Skin Regeneration Complex"
-  }
+  },
+  {
+  name: "Gentle Cleanser",
+  price: 25,
+  category: "Cleanser",
+  skinType: ["oily", "dry", "combination"],
+  concerns: ["acne", "dullness"],
+  description: "Daily Cleansing Gel"
+},
+{
+  name: "Balancing Toner",
+  price: 30,
+  category: "Toner",
+  skinType: ["oily", "combination"],
+  concerns: ["pores", "acne"],
+  description: "Pore-Refining Toner"
+}
 ];
 
 mongoose.connect(process.env.MONGODB_URI)
