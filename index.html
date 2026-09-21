@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUMINA — Radiance, Refined by Science</title>
   
-  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
   <link rel="stylesheet" href="style.css" />
@@ -20,22 +18,19 @@
   <!-- ================= FLOATING NAVBAR ================= -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <!-- Brand Logo -->
       <a href="#" class="nav-logo">LUMINA</a>
 
-      <!-- Navigation Links -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#products">Shop</a></li>
-        <li><a href="#why-lumina">Routine Finder</a></li>
+        <li><a href="#routine-finder">Routine Finder</a></li> 
         <li><a href="#reviews">Reviews</a></li>
       </ul>
 
-      <!-- Action Icons -->
       <div class="nav-actions">
-        <a href="#account" class="nav-action-link">
-          <i class="fa-regular fa-user"></i>
-          <span>Account</span>
-        </a>
+       <a href="#" class="nav-action-link" id="accountBtn">
+  <i class="fa-regular fa-user"></i>
+  <span id="accountLabel">Account</span>
+       </a>
         <a href="#cart" class="nav-action-link cart-btn">
           <i class="fa-solid fa-cart-shopping"></i>
           <span>Cart (<span id="cartCount">0</span>)</span>
@@ -43,7 +38,6 @@
         <button class="nav-icon-btn" aria-label="Search">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <!-- Mobile hamburger -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -51,7 +45,7 @@
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION (FULL SCREEN) ================= -->
+  <!-- ================= HERO SECTION ================= -->
   <section class="hero-section">
     <div class="hero-bg-container">
       <img
@@ -89,69 +83,14 @@
       <p class="section-subtitle">Explore our bestsellers and find your perfect skincare match.</p>
     </div>
 
-    <div class="products-grid">
-      <!-- Product 1: Serum Glass -->
-      <div class="product-card" data-product="Serum Glass" data-price="38.0">
-        <div class="card-img-box">
-          <img src="surem.png" alt="Serum Glass" loading="lazy" />
-        </div>
-        <div class="card-details">
-          <h3 class="product-name">Serum Glass</h3>
-          <span class="product-price">$38.0</span>
-        </div>
-        <button class="product-arrow-btn" aria-label="Add Serum Glass to cart" title="Add to cart">
-          &rarr;
-        </button>
-      </div>
-
-      <!-- Product 2: Moisturizers -->
-      <div class="product-card" data-product="Moisturizers" data-price="40.0">
-        <div class="card-img-box">
-          <img src="moist.png" alt="Moisturizers" loading="lazy" />
-        </div>
-        <div class="card-details">
-          <h3 class="product-name">Moisturizers</h3>
-          <span class="product-price">$40.0</span>
-        </div>
-        <button class="product-arrow-btn" aria-label="Add Moisturizers to cart" title="Add to cart">
-          &rarr;
-        </button>
-      </div>
-
-      <!-- Product 3: Toners -->
-      <div class="product-card" data-product="Toners" data-price="32.0">
-        <div class="card-img-box">
-          <img src="toner.png" alt="Toners" loading="lazy" />
-        </div>
-        <div class="card-details">
-          <h3 class="product-name">Toners</h3>
-          <span class="product-price">$32.0</span>
-        </div>
-        <button class="product-arrow-btn" aria-label="Add Toners to cart" title="Add to cart">
-          &rarr;
-        </button>
-      </div>
-
-      <!-- Product 4: Face Oils -->
-      <div class="product-card" data-product="Face Oils" data-price="50.0">
-        <div class="card-img-box">
-          <img src="face oil.png" alt="Face Oils" loading="lazy" />
-        </div>
-        <div class="card-details">
-          <h3 class="product-name">Face Oils</h3>
-          <span class="product-price">$50.0</span>
-        </div>
-        <button class="product-arrow-btn" aria-label="Add Face Oils to cart" title="Add to cart">
-          &rarr;
-        </button>
-      </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- المنتجات هتتحط هنا تلقائيًا من الباك اند -->
     </div>
   </section>
 
   <!-- ================= FEATURES / VALUE PROPS ================= -->
   <section class="features-section">
     <div class="features-grid">
-      <!-- Feature 1 -->
       <div class="feature-item">
         <div class="feature-icon-circle">
           <i class="fa-solid fa-leaf"></i>
@@ -160,7 +99,6 @@
         <p class="feature-desc">Thoughtfully sourced, never compromised.</p>
       </div>
 
-      <!-- Feature 2 -->
       <div class="feature-item">
         <div class="feature-icon-circle">
           <i class="fa-solid fa-flask"></i>
@@ -169,7 +107,6 @@
         <p class="feature-desc">Visible results, backed by science.</p>
       </div>
 
-      <!-- Feature 3 -->
       <div class="feature-item">
         <div class="feature-icon-circle">
           <i class="fa-solid fa-truck-fast"></i>
@@ -178,7 +115,6 @@
         <p class="feature-desc">On orders over $75.</p>
       </div>
 
-      <!-- Feature 4 -->
       <div class="feature-item">
         <div class="feature-icon-circle">
           <i class="fa-regular fa-shield-check"></i>
@@ -192,12 +128,10 @@
   <!-- ================= WHY LUMINA / REAL CARE SECTION ================= -->
   <section class="why-lumina-section" id="why-lumina">
     <div class="why-lumina-grid">
-      <!-- Left Photo: Real Care. Real Results. -->
       <div class="why-image-card">
         <img src="real care.png" alt="Real Care. Real Results." class="why-card-img" />
       </div>
 
-      <!-- Center Card: Information & Checklist -->
       <div class="why-content-card">
         <span class="why-tag">WHY LUMINA</span>
         <h2 class="why-heading">Skincare That<br />Works With Your Skin</h2>
@@ -225,12 +159,48 @@
         </ul>
       </div>
 
-      <!-- Right Photo: Botanical Dew Texture -->
       <div class="why-leaf-card">
         <img src="leaf-droplet.png" alt="Pure botanical formula in petri dish" class="why-card-img" />
       </div>
     </div>
   </section>
+  <!-- ================= ROUTINE FINDER SECTION ================= -->
+<section class="routine-finder-section" id="routine-finder">
+  <div class="section-header">
+    <h2 class="section-title">FIND YOUR ROUTINE</h2>
+    <p class="section-subtitle">Answer two quick questions and we'll build your personalized skincare routine.</p>
+  </div>
+
+  <div class="routine-finder-card">
+    <form id="routineForm">
+      <div class="routine-field">
+        <label class="routine-label">What's your skin type?</label>
+        <div class="routine-options" id="skinTypeOptions">
+          <button type="button" class="routine-option" data-value="oily">Oily</button>
+          <button type="button" class="routine-option" data-value="dry">Dry</button>
+          <button type="button" class="routine-option" data-value="combination">Combination</button>
+        </div>
+      </div>
+
+      <div class="routine-field">
+        <label class="routine-label">What are your main concerns?</label>
+        <div class="routine-options" id="concernsOptions">
+          <button type="button" class="routine-option" data-value="acne">Acne</button>
+          <button type="button" class="routine-option" data-value="dryness">Dryness</button>
+          <button type="button" class="routine-option" data-value="aging">Aging</button>
+          <button type="button" class="routine-option" data-value="dullness">Dullness</button>
+          <button type="button" class="routine-option" data-value="pores">Pores</button>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-dark routine-submit-btn">
+        Find My Routine <span>&rarr;</span>
+      </button>
+    </form>
+
+    <div id="routineResult" class="routine-result"></div>
+  </div>
+</section>
 
   <!-- ================= TESTIMONIALS SECTION ================= -->
   <section class="testimonials-section" id="reviews">
@@ -241,7 +211,6 @@
 
     <div class="testimonials-slider-container">
       <div class="testimonials-grid" id="testimonialsGrid">
-        <!-- Review 1 -->
         <div class="testimonial-card active">
           <div class="testimonial-user">
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Sarah M." class="user-avatar" />
@@ -261,7 +230,6 @@
           </div>
         </div>
 
-        <!-- Review 2 -->
         <div class="testimonial-card active">
           <div class="testimonial-user">
             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80" alt="Nouran A." class="user-avatar" />
@@ -281,7 +249,6 @@
           </div>
         </div>
 
-        <!-- Review 3 -->
         <div class="testimonial-card active">
           <div class="testimonial-user">
             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Dina K." class="user-avatar" />
@@ -302,7 +269,6 @@
         </div>
       </div>
 
-      <!-- Testimonial Slider Controls -->
       <div class="slider-controls">
         <button class="slider-arrow" id="prevReview" aria-label="Previous testimonial">
           &larr;
@@ -341,13 +307,11 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
-        <!-- Brand & Tagline -->
         <div class="footer-brand">
           <a href="#" class="footer-logo">LUMINA</a>
           <p class="footer-tagline">Radiance, Refined.</p>
         </div>
 
-        <!-- Links -->
         <ul class="footer-nav">
           <li><a href="#products">Shop</a></li>
           <li><a href="#">About Us</a></li>
@@ -357,7 +321,6 @@
           <li><a href="#">Contact</a></li>
         </ul>
 
-        <!-- Social & Newsletter -->
         <div class="footer-social-newsletter">
           <div class="footer-socials">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -381,8 +344,33 @@
     </div>
   </footer>
 
-  <!-- Toast Notification for Add to Cart -->
   <div class="toast" id="toast"></div>
+  <!-- ================= AUTH MODAL ================= -->
+<div class="auth-modal-overlay" id="authModalOverlay">
+  <div class="auth-modal">
+    <button class="auth-modal-close" id="authModalClose" aria-label="Close">&times;</button>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Sign In</button>
+      <button class="auth-tab" data-tab="register">Create Account</button>
+    </div>
+
+    <form id="loginForm" class="auth-form active">
+      <input type="email" placeholder="Email" required id="loginEmail" />
+      <input type="password" placeholder="Password" required id="loginPassword" />
+      <button type="submit" class="btn-dark auth-submit-btn">Sign In <span>&rarr;</span></button>
+      <p class="auth-error" id="loginError"></p>
+    </form>
+
+    <form id="registerForm" class="auth-form">
+      <input type="text" placeholder="Full Name" required id="registerName" />
+      <input type="email" placeholder="Email" required id="registerEmail" />
+      <input type="password" placeholder="Password" required id="registerPassword" />
+      <button type="submit" class="btn-dark auth-submit-btn">Create Account <span>&rarr;</span></button>
+      <p class="auth-error" id="registerError"></p>
+    </form>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
