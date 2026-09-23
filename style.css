@@ -1348,3 +1348,152 @@ button {
   color: #b33a3a;
   min-height: 1.2em;
 }
+/* ==========================================================================
+   CART & CHECKOUT MODALS
+   ========================================================================== */
+.cart-modal {
+  max-width: 460px;
+}
+
+.cart-modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--forest-dark);
+  margin-bottom: 1.5rem;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1.2rem;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: var(--bg-features);
+  border-radius: 14px;
+}
+
+.cart-item-name {
+  font-weight: 600;
+  color: var(--forest-dark);
+  font-size: 0.9rem;
+}
+
+.cart-item-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cart-qty-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  color: var(--forest-mid);
+  font-size: 0.88rem;
+}
+
+.cart-remove-btn {
+  color: #b33a3a;
+  font-size: 0.85rem;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--forest-dark);
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-subtle);
+  margin-bottom: 1rem;
+}
+
+.cart-checkout-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.stripe-card-element {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-subtle);
+  background: var(--white);
+}
+
+.empty-cart-msg {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0;
+}
+
+/* ==========================================================================
+   REVIEW FORM
+   ========================================================================== */
+.review-form-card {
+  max-width: 500px;
+  margin: 2.5rem auto 0;
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 1.8rem;
+}
+
+.review-form-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+#reviewForm select,
+#reviewForm textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  outline: none;
+}
+
+#reviewForm textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.review-stars-input {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.3rem;
+  color: #3B5F48;
+}
+
+.review-stars-input i {
+  cursor: pointer;
+}

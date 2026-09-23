@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
   <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -22,16 +23,16 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#products">Shop</a></li>
-        <li><a href="#routine-finder">Routine Finder</a></li> 
+        <li><a href="#routine-finder">Routine Finder</a></li>
         <li><a href="#reviews">Reviews</a></li>
       </ul>
 
       <div class="nav-actions">
-       <a href="#" class="nav-action-link" id="accountBtn">
-  <i class="fa-regular fa-user"></i>
-  <span id="accountLabel">Account</span>
-       </a>
-        <a href="#cart" class="nav-action-link cart-btn">
+        <a href="#" class="nav-action-link" id="accountBtn">
+          <i class="fa-regular fa-user"></i>
+          <span id="accountLabel">Account</span>
+        </a>
+        <a href="#" class="nav-action-link cart-btn" id="cartBtn">
           <i class="fa-solid fa-cart-shopping"></i>
           <span>Cart (<span id="cartCount">0</span>)</span>
         </a>
@@ -164,43 +165,44 @@
       </div>
     </div>
   </section>
+
   <!-- ================= ROUTINE FINDER SECTION ================= -->
-<section class="routine-finder-section" id="routine-finder">
-  <div class="section-header">
-    <h2 class="section-title">FIND YOUR ROUTINE</h2>
-    <p class="section-subtitle">Answer two quick questions and we'll build your personalized skincare routine.</p>
-  </div>
+  <section class="routine-finder-section" id="routine-finder">
+    <div class="section-header">
+      <h2 class="section-title">FIND YOUR ROUTINE</h2>
+      <p class="section-subtitle">Answer two quick questions and we'll build your personalized skincare routine.</p>
+    </div>
 
-  <div class="routine-finder-card">
-    <form id="routineForm">
-      <div class="routine-field">
-        <label class="routine-label">What's your skin type?</label>
-        <div class="routine-options" id="skinTypeOptions">
-          <button type="button" class="routine-option" data-value="oily">Oily</button>
-          <button type="button" class="routine-option" data-value="dry">Dry</button>
-          <button type="button" class="routine-option" data-value="combination">Combination</button>
+    <div class="routine-finder-card">
+      <form id="routineForm">
+        <div class="routine-field">
+          <label class="routine-label">What's your skin type?</label>
+          <div class="routine-options" id="skinTypeOptions">
+            <button type="button" class="routine-option" data-value="oily">Oily</button>
+            <button type="button" class="routine-option" data-value="dry">Dry</button>
+            <button type="button" class="routine-option" data-value="combination">Combination</button>
+          </div>
         </div>
-      </div>
 
-      <div class="routine-field">
-        <label class="routine-label">What are your main concerns?</label>
-        <div class="routine-options" id="concernsOptions">
-          <button type="button" class="routine-option" data-value="acne">Acne</button>
-          <button type="button" class="routine-option" data-value="dryness">Dryness</button>
-          <button type="button" class="routine-option" data-value="aging">Aging</button>
-          <button type="button" class="routine-option" data-value="dullness">Dullness</button>
-          <button type="button" class="routine-option" data-value="pores">Pores</button>
+        <div class="routine-field">
+          <label class="routine-label">What are your main concerns?</label>
+          <div class="routine-options" id="concernsOptions">
+            <button type="button" class="routine-option" data-value="acne">Acne</button>
+            <button type="button" class="routine-option" data-value="dryness">Dryness</button>
+            <button type="button" class="routine-option" data-value="aging">Aging</button>
+            <button type="button" class="routine-option" data-value="dullness">Dullness</button>
+            <button type="button" class="routine-option" data-value="pores">Pores</button>
+          </div>
         </div>
-      </div>
 
-      <button type="submit" class="btn-dark routine-submit-btn">
-        Find My Routine <span>&rarr;</span>
-      </button>
-    </form>
+        <button type="submit" class="btn-dark routine-submit-btn">
+          Find My Routine <span>&rarr;</span>
+        </button>
+      </form>
 
-    <div id="routineResult" class="routine-result"></div>
-  </div>
-</section>
+      <div id="routineResult" class="routine-result"></div>
+    </div>
+  </section>
 
   <!-- ================= TESTIMONIALS SECTION ================= -->
   <section class="testimonials-section" id="reviews">
@@ -211,62 +213,7 @@
 
     <div class="testimonials-slider-container">
       <div class="testimonials-grid" id="testimonialsGrid">
-        <div class="testimonial-card active">
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Sarah M." class="user-avatar" />
-          </div>
-          <div class="testimonial-body">
-            <div class="star-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              &ldquo;I've been using Lumina for a month and my skin has never looked better! So hydrated and fresh.&rdquo;
-            </p>
-            <span class="testimonial-author">&mdash; Sarah M.</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card active">
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80" alt="Nouran A." class="user-avatar" />
-          </div>
-          <div class="testimonial-body">
-            <div class="star-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              &ldquo;The Hydra-Gel is a game changer! Lightweight, non-greasy and gives such a natural glow.&rdquo;
-            </p>
-            <span class="testimonial-author">&mdash; Nouran A.</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card active">
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Dina K." class="user-avatar" />
-          </div>
-          <div class="testimonial-body">
-            <div class="star-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              &ldquo;Beautiful packaging, amazing products and fast delivery. I'm obsessed!&rdquo;
-            </p>
-            <span class="testimonial-author">&mdash; Dina K.</span>
-          </div>
-        </div>
+        <!-- الريفيوز هتتحط هنا تلقائيًا من الباك اند -->
       </div>
 
       <div class="slider-controls">
@@ -281,6 +228,25 @@
         <button class="slider-arrow" id="nextReview" aria-label="Next testimonial">
           &rarr;
         </button>
+      </div>
+
+      <div class="review-form-card">
+        <h4 class="review-form-title">Share Your Experience</h4>
+        <form id="reviewForm">
+          <select id="reviewProduct" required>
+            <option value="">Select a product...</option>
+          </select>
+          <div class="review-stars-input" id="reviewStars">
+            <i class="fa-regular fa-star" data-value="1"></i>
+            <i class="fa-regular fa-star" data-value="2"></i>
+            <i class="fa-regular fa-star" data-value="3"></i>
+            <i class="fa-regular fa-star" data-value="4"></i>
+            <i class="fa-regular fa-star" data-value="5"></i>
+          </div>
+          <textarea id="reviewComment" placeholder="Tell us what you think..." required></textarea>
+          <button type="submit" class="btn-dark">Submit Review <span>&rarr;</span></button>
+          <p class="auth-error" id="reviewError"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -345,33 +311,71 @@
   </footer>
 
   <div class="toast" id="toast"></div>
+
   <!-- ================= AUTH MODAL ================= -->
-<div class="auth-modal-overlay" id="authModalOverlay">
-  <div class="auth-modal">
-    <button class="auth-modal-close" id="authModalClose" aria-label="Close">&times;</button>
+  <div class="auth-modal-overlay" id="authModalOverlay">
+    <div class="auth-modal">
+      <button class="auth-modal-close" id="authModalClose" aria-label="Close">&times;</button>
 
-    <div class="auth-tabs">
-      <button class="auth-tab active" data-tab="login">Sign In</button>
-      <button class="auth-tab" data-tab="register">Create Account</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Sign In</button>
+        <button class="auth-tab" data-tab="register">Create Account</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active">
+        <input type="email" placeholder="Email" required id="loginEmail" />
+        <input type="password" placeholder="Password" required id="loginPassword" />
+        <button type="submit" class="btn-dark auth-submit-btn">Sign In <span>&rarr;</span></button>
+        <p class="auth-error" id="loginError"></p>
+      </form>
+
+      <form id="registerForm" class="auth-form">
+        <input type="text" placeholder="Full Name" required id="registerName" />
+        <input type="email" placeholder="Email" required id="registerEmail" />
+        <input type="password" placeholder="Password" required id="registerPassword" />
+        <button type="submit" class="btn-dark auth-submit-btn">Create Account <span>&rarr;</span></button>
+        <p class="auth-error" id="registerError"></p>
+      </form>
     </div>
-
-    <form id="loginForm" class="auth-form active">
-      <input type="email" placeholder="Email" required id="loginEmail" />
-      <input type="password" placeholder="Password" required id="loginPassword" />
-      <button type="submit" class="btn-dark auth-submit-btn">Sign In <span>&rarr;</span></button>
-      <p class="auth-error" id="loginError"></p>
-    </form>
-
-    <form id="registerForm" class="auth-form">
-      <input type="text" placeholder="Full Name" required id="registerName" />
-      <input type="email" placeholder="Email" required id="registerEmail" />
-      <input type="password" placeholder="Password" required id="registerPassword" />
-      <button type="submit" class="btn-dark auth-submit-btn">Create Account <span>&rarr;</span></button>
-      <p class="auth-error" id="registerError"></p>
-    </form>
   </div>
-</div>
 
+  <!-- ================= CART MODAL ================= -->
+  <div class="auth-modal-overlay" id="cartModalOverlay">
+    <div class="auth-modal cart-modal">
+      <button class="auth-modal-close" id="cartModalClose" aria-label="Close">&times;</button>
+      <h3 class="cart-modal-title">Your Cart</h3>
+
+      <div id="cartItemsList" class="cart-items-list"></div>
+
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotalPrice">$0.0</span>
+      </div>
+
+      <button class="btn-dark cart-checkout-btn" id="goToCheckoutBtn">Checkout <span>&rarr;</span></button>
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT MODAL ================= -->
+  <div class="auth-modal-overlay" id="checkoutModalOverlay">
+    <div class="auth-modal cart-modal">
+      <button class="auth-modal-close" id="checkoutModalClose" aria-label="Close">&times;</button>
+      <h3 class="cart-modal-title">Checkout</h3>
+
+      <form id="shippingForm" class="auth-form active">
+        <input type="text" placeholder="Full Name" required id="shipFullName" />
+        <input type="text" placeholder="Address" required id="shipAddress" />
+        <input type="text" placeholder="City" required id="shipCity" />
+        <input type="tel" placeholder="Phone" required id="shipPhone" />
+
+        <label class="routine-label" style="margin-top: 0.5rem;">Card Details (Test Mode)</label>
+        <div id="cardElement" class="stripe-card-element"></div>
+
+        <button type="submit" class="btn-dark auth-submit-btn" id="payButton">Pay Now <span>&rarr;</span></button>
+        <p class="auth-error" id="checkoutError"></p>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
