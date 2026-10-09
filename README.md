@@ -2,7 +2,8 @@
 
 LUMINA is a luxury skincare store with a real backend: a product catalog served from MongoDB, user accounts with JWT authentication, a rule-based **Routine Finder**, a cart and checkout flow with **Stripe (test mode)** payments, and customer reviews.
 
-> Frontend UI design based on the original LUMINA design by Rawan Mustafa ([Rawanmustafa19/LUMINA](https://github.com/Rawanmustafa19/LUMINA)). Backend, API integration, authentication, checkout, and payments built by Maram Nabil.
+> Frontend UI design based on the original LUMINA design . Backend, API integration, authentication, checkout, and payments
+
 
 ---
 
