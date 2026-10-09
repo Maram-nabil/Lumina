@@ -439,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
         authModalOverlay.classList.remove('show');
         showToast(`Welcome back, ${data.user.name}!`);
       } catch (err) {
-        errorEl.textContent = 'Something went wrong. Please try again.';
+       errorEl.textContent = 'Cannot reach the server. Please try again in a moment.';
       }
     });
   }

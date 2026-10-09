@@ -332,7 +332,7 @@
       <form id="registerForm" class="auth-form">
         <input type="text" placeholder="Full Name" required id="registerName" />
         <input type="email" placeholder="Email" required id="registerEmail" />
-        <input type="password" placeholder="Password" required id="registerPassword" />
+        <input type="password" placeholder="Password (min. 6 characters)" required minlength="6" id="registerPassword" />
         <button type="submit" class="btn-dark auth-submit-btn">Create Account <span>&rarr;</span></button>
         <p class="auth-error" id="registerError"></p>
       </form>
